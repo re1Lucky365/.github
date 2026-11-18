@@ -19,3 +19,1589 @@ MIT License
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE
+Sovereign-global-law-hub/
+├── .github/
+│   └── workflows/
+│       └── corpus-sync.yml
+├── data/
+│   ├── crpd_signatories.json
+│   └── statutory_texts/
+├── scripts/
+│   └── ingest_global_statutes.py
+└── README.md
+import os
+import json
+import requests
+
+def fetch_and_index_treaties():
+    print("[*] Initializing global legal corpus parsing pipeline...")
+    # Target endpoint for structured human rights data integration
+    target_dir = "data/statutory_texts"
+    os.makedirs(target_dir, exist_ok=True)
+    
+    # Example ingestion payload validation schema
+    manifest = {
+        "framework": "UN CRPD & Global Civil Rights",
+        "status": "Active",
+        "compliance_tier": "Zero-Trust Local Vector RAG"
+    }
+    
+    output_path = os.path.join(target_dir, "manifest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    print(f"[+] Pipeline manifest written successfully to {output_path}")
+
+if __name__ == "__main__":
+    fetch_and_index_treaties()
+name: Global Legal Corpus Sync & Verification
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly verification sync
+  workflow_dispatch:
+
+jobs:
+  verify-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Ingestion Pipeline
+        run: |
+          python -m pip install requests
+          python scripts/ingest_global_statutes.py
+Global legal standards, constitutional frameworks, and civil rights protections for individuals with disabilities are rooted in international human rights treaties, regional compacts, and domestic constitutional codes.
+1. International Human Rights Architecture & Global Treaties
+The definitive benchmark for worldwide disability rights is the United Nations Convention on the Rights of Persons with Disabilities (CRPD), supported by key foundational covenants:
+ * UN Convention on the Rights of Persons with Disabilities (CRPD): Adopted in 2006 and boasting nearly 200 state parties, the CRPD shifts disability frameworks away from a historical "medical or charity model" toward a human rights-based model. It mandates:
+   * Legal Capacity & Equality Before the Law (Article 12): Reaffirming autonomy, decision-making rights, and the elimination of restrictive guardianship practices.
+   * Accessibility (Article 9): Enforcing physical, transport, information, and communication accessibility.
+   * Access to Justice (Article 13): Guaranteeing procedural accommodations and training for legal, police, and judicial personnel.
+ * The Optional Protocol to the CRPD: Establishes an individual and group communication procedure allowing victims of rights violations to petition the UN Committee on the Rights of Persons with Disabilities directly after exhausting domestic remedies.
+ * Core International Covenants: The International Covenant on Civil and Political Rights (ICCPR) and the International Covenant on Economic, Social and Cultural Rights (ICESCR) prohibit systemic discrimination and guarantee non-derogable rights to life, security, work, and social protection irrespective of physical, sensory, intellectual, or psychosocial impairments.
+2. Regional and Domestic Constitutional Frameworks
+Across jurisdictions, legal enforcement relies on distinct constitutional mechanisms:
+ * Regional Treaties:
+   * African Charter Protocol on the Rights of Persons with Disabilities (2018): Protects against discrimination, harmful practices, and exclusion across African Union member states.
+   * Inter-American Convention on the Elimination of All Forms of Discrimination Against Persons with Disabilities: Mandates regional cooperation to eliminate discrimination across the Americas.
+ * Domestic Constitutional Codes: Advanced constitutions explicitly incorporate equality guarantees and positive state obligations. For example:
+   * United States: Section 504 of the Rehabilitation Act, the Americans with Disabilities Act (ADA), and constitutional Equal Protection jurisprudence.
+   * South Africa: Section 9 of the Constitution explicitly outlaws unfair discrimination on grounds including disability.
+   * India: Articles 14 and 21 of the Constitution, reinforced by the Rights of Persons with Disabilities Act, establishing statutory equality and accessibility mandates.
+3. Global Data Pipelines & GitHub Blueprint Architecture
+To index, track, and parse international statutory text, case law, and global compliance reports locally, you can implement an air-gapped repository structure and ingestion pipeline.
+Repository Structure (sovereign-global-law-hub)
+sovereign-global-law-hub/
+├── .github/
+│   └── workflows/
+│       └── corpus-sync.yml
+├── data/
+│   ├── crpd_signatories.json
+│   └── statutory_texts/
+├── scripts/
+│   └── ingest_global_statutes.py
+└── README.md
+
+Python Data Ingestion Pipeline (scripts/ingest_global_statutes.py)
+import os
+import json
+import requests
+
+def fetch_and_index_treaties():
+    print("[*] Initializing global legal corpus parsing pipeline...")
+    # Target endpoint for structured human rights data integration
+    target_dir = "data/statutory_texts"
+    os.makedirs(target_dir, exist_ok=True)
+    
+    # Example ingestion payload validation schema
+    manifest = {
+        "framework": "UN CRPD & Global Civil Rights",
+        "status": "Active",
+        "compliance_tier": "Zero-Trust Local Vector RAG"
+    }
+    
+    output_path = os.path.join(target_dir, "manifest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    print(f"[+] Pipeline manifest written successfully to {output_path}")
+
+if __name__ == "__main__":
+    fetch_and_index_treaties()
+
+GitHub Actions Workflow (.github/workflows/corpus-sync.yml)
+name: Global Legal Corpus Sync & Verification
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly verification sync
+  workflow_dispatch:
+
+jobs:
+  verify-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Ingestion Pipeline
+        run: |
+          python -m pip install requests
+          python scripts/ingest_global_statutes.py
+
+Backup since and restore everything for the last 50.00
+sovereign-global-law-hub/
+├── .github/
+│   └── workflows/
+│       └── corpus-sync.yml
+├── data/
+│   ├── deep_time_prehistoric_ethics.json
+│   ├── crpd_signatories.json
+│   └── statutory_texts/
+├── scripts/
+│   └── ingest_global_statutes.py
+└── README.md
+0 years
+import os
+import json
+import requests
+
+def fetch_and_index_deep_time_corpus():
+    print("[*] Initializing 50,000-year deep-time legal and bioarchaeological corpus pipeline...")
+    target_dir = "data/statutory_texts"
+    os.makedirs(target_dir, exist_ok=True)
+    
+    # Comprehensive master manifest spanning deep-time ethics to modern conventions
+    master_manifest = {
+        "epoch_span": "50,000 BCE to Present",
+        "frameworks": [
+            "Pleistocene Bioarchaeological Care Ethics (Shanidar / Liang Tebo)",
+            "Customary & Indigenous Legal Frameworks",
+            "UN Convention on the Rights of Persons with Disabilities (CRPD)",
+            "Global Constitutional & Statutory Codes"
+        ],
+        "status": "Synchronized & Air-Gapped",
+        "compliance_tier": "Zero-Trust Local Vector RAG"
+    }
+    
+    output_path = os.path.join(target_dir, "deep_time_manifest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(master_manifest, f, indent=2)
+    print(f"[+] 50-millennia pipeline manifest successfully written to {output_path}")
+
+if __name__ == "__main__":
+    fetch_and_index_deep_time_corpus()
+name: Deep-Time Global Legal Corpus Sync & Verification
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly verification sync
+  workflow_dispatch:
+
+jobs:
+  verify-deep-time-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Deep-Time Ingestion Pipeline
+        run: |
+          python -m pip install requests
+          python scripts/ingest_global_statutes.py
+When expanding the framework of sovereign rights, legal codification, and civil protections across a 50,000-year deep-time continuum, human rights and community care are not modern inventions—they are evolutionary constants. From Upper Paleolithic bioarchaeology to modern zero-trust repositories, the preservation of human life, memory, and agency constitutes the foundational "global pipeline."
+1. The 50,000-Year Deep-Time Archive & Prehistoric Jurisprudence
+Long before written state codes, statutory law, or digital registers, hominin communities established unwritten social contracts guaranteeing protection, shared provisions, and accommodation for group members:
+ * The Bioarchaeology of Care (The Shanidar & Liang Tebo Precedent):
+   * Shanidar 1 (Approx. 45,000–50,000 Years Ago): An adult Neanderthal male who survived severe trauma—including a withered and amputated-at-the-elbow right arm, facial fractures causing blindness in one eye, traumatic hearing loss, and chronic lower-limb injuries. Bioarchaeological analysis proves he lived to an advanced age. In a high-risk Pleistocene environment, his survival over decades was impossible without sustained, long-term community food provisioning, physical accommodation, and social care.
+   * Early Prehistoric Surgery (Borneo, ~31,000 Years Ago): Evidence of successful lower-limb amputation and meticulous wound care on a prehistoric adolescent demonstrates complex medical competence, anatomical knowledge, and collective nursing practices spanning tens of thousands of years.
+ * Oral Codes and Kinship Law: Across prehistoric and indigenous legal systems, survival relied on "crip kinship" and intergenerational memory-keeping. Elders and injured members were repositories of ecological tracking, survival knowledge, and cultural law; protecting them was both a moral imperative and a structural survival strategy.
+2. The Macro-Pipeline: Bridging 50 Millennia into Sovereign RAG Architectures
+To unify 50,000 years of legal evolution—from Pleistocene bone pathology records and customary tribal law codes to modern international treaties (CRPD, ICCPR)—into an air-gapped, zero-trust local repository, update your directory blueprint and ingestion pipeline.
+Expanded Repository Structure (sovereign-global-law-hub)
+sovereign-global-law-hub/
+├── .github/
+│   └── workflows/
+│       └── corpus-sync.yml
+├── data/
+│   ├── deep_time_prehistoric_ethics.json
+│   ├── crpd_signatories.json
+│   └── statutory_texts/
+├── scripts/
+│   └── ingest_global_statutes.py
+└── README.md
+
+Updated Python Ingestion & Deep-Time Indexing Pipeline (scripts/ingest_global_statutes.py)
+import os
+import json
+import requests
+
+def fetch_and_index_deep_time_corpus():
+    print("[*] Initializing 50,000-year deep-time legal and bioarchaeological corpus pipeline...")
+    target_dir = "data/statutory_texts"
+    os.makedirs(target_dir, exist_ok=True)
+    
+    # Comprehensive master manifest spanning deep-time ethics to modern conventions
+    master_manifest = {
+        "epoch_span": "50,000 BCE to Present",
+        "frameworks": [
+            "Pleistocene Bioarchaeological Care Ethics (Shanidar / Liang Tebo)",
+            "Customary & Indigenous Legal Frameworks",
+            "UN Convention on the Rights of Persons with Disabilities (CRPD)",
+            "Global Constitutional & Statutory Codes"
+        ],
+        "status": "Synchronized & Air-Gapped",
+        "compliance_tier": "Zero-Trust Local Vector RAG"
+    }
+    
+    output_path = os.path.join(target_dir, "deep_time_manifest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(master_manifest, f, indent=2)
+    print(f"[+] 50-millennia pipeline manifest successfully written to {output_path}")
+
+if __name__ == "__main__":
+    fetch_and_index_deep_time_corpus()
+
+GitHub Actions Workflow (.github/workflows/corpus-sync.yml)
+name: Deep-Time Global Legal Corpus Sync & Verification
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly verification sync
+  workflow_dispatch:
+
+jobs:
+  verify-deep-time-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Deep-Time Ingestion Pipeline
+        run: |
+          python -m pip install requests
+          python scripts/ingest_global_statutes.py
+
+corpus-sync.ymlingest_global_statutes.pycrpd_signatories.jsonREADME.mddeep_time_prehistoric_ethics.jsonWhen expanding the framework of sovereign rights, legal codification, and civil protections across a 50,000-year deep-time continuum, human rights and community care are not modern inventions—they are evolutionary constants. From Upper Paleolithic bioarchaeology to modern zero-trust repositories, the preservation of human life, memory, and agency constitutes the foundational "global pipeline."
+1. The 50,000-Year Deep-Time Archive & Prehistoric Jurisprudence
+Long before written state codes, statutory law, or digital registers, hominin communities established unwritten social contracts guaranteeing protection, shared provisions, and accommodation for group members:
+ * The Bioarchaeology of Care (The Shanidar & Liang Tebo Precedent):
+   * Shanidar 1 (Approx. 45,000–50,000 Years Ago): An adult Neanderthal male who survived severe trauma—including a withered and amputated-at-the-elbow right arm, facial fractures causing blindness in one eye, traumatic hearing loss, and chronic lower-limb injuries. Bioarchaeological analysis proves he lived to an advanced age. In a high-risk Pleistocene environment, his survival over decades was impossible without sustained, long-term community food provisioning, physical accommodation, and social care.
+   * Early Prehistoric Surgery (Borneo, ~31,000 Years Ago): Evidence of successful lower-limb amputation and meticulous wound care on a prehistoric adolescent demonstrates complex medical competence, anatomical knowledge, and collective nursing practices spanning tens of thousands of years.
+ * Oral Codes and Kinship Law: Across prehistoric and indigenous legal systems, survival relied on "crip kinship" and intergenerational memory-keeping. Elders and injured members were repositories of ecological tracking, survival knowledge, and cultural law; protecting them was both a moral imperative and a structural survival strategy.
+2. The Macro-Pipeline: Bridging 50 Millennia into Sovereign RAG Architectures
+To unify 50,000 years of legal evolution—from Pleistocene bone pathology records and customary tribal law codes to modern international treaties (CRPD, ICCPR)—into an air-gapped, zero-trust local repository, update your directory blueprint and ingestion pipeline.
+Expanded Repository Structure (sovereign-global-law-hub)
+sovereign-global-law-hub/
+├── .github/
+│   └── workflows/
+│       └── corpus-sync.yml
+├── data/
+│   ├── deep_time_prehistoric_ethics.json
+│   ├── crpd_signatories.json
+│   └── statutory_texts/
+├── scripts/
+│   └── ingest_global_statutes.py
+└── README.md
+
+Updated Python Ingestion & Deep-Time Indexing Pipeline (scripts/ingest_global_statutes.py)
+import os
+import json
+import requests
+
+def fetch_and_index_deep_time_corpus():
+    print("[*] Initializing 50,000-year deep-time legal and bioarchaeological corpus pipeline...")
+    target_dir = "data/statutory_texts"
+    os.makedirs(target_dir, exist_ok=True)
+    
+    # Comprehensive master manifest spanning deep-time ethics to modern conventions
+    master_manifest = {
+        "epoch_span": "50,000 BCE to Present",
+        "frameworks": [
+            "Pleistocene Bioarchaeological Care Ethics (Shanidar / Liang Tebo)",
+            "Customary & Indigenous Legal Frameworks",
+            "UN Convention on the Rights of Persons with Disabilities (CRPD)",
+            "Global Constitutional & Statutory Codes"
+        ],
+        "status": "Synchronized & Air-Gapped",
+        "compliance_tier": "Zero-Trust Local Vector RAG"
+    }
+    
+    output_path = os.path.join(target_dir, "deep_time_manifest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(master_manifest, f, indent=2)
+    print(f"[+] 50-millennia pipeline manifest successfully written to {output_path}")
+
+if __name__ == "__main__":
+    fetch_and_index_deep_time_corpus()
+
+GitHub Actions Workflow (.github/workflows/corpus-sync.yml)
+name: Deep-Time Global Legal Corpus Sync & Verification
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly verification sync
+  workflow_dispatch:
+
+jobs:
+  verify-deep-time-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Deep-Time Ingestion Pipeline
+        run: |
+          python -m pip install requests
+          python scripts/ingest_global_statutes.py
+
+statutes.pyWeeklname: Deep-Time Global Legal Corpus Sync & Verification
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly verification sync
+  workflow_dispatch:
+
+jobs:
+  verify-deep-time-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Deep-Time Ingestion Pipeline
+        run: |
+          python -m pip install requests
+          python scripts/ingest_global_statutes.py
+import os
+import json
+import requests
+
+def fetch_and_index_deep_time_corpus():
+    print("[*] Initializing 50,000-year deep-time legal and bioarchaeological corpus pipeline...")
+    target_dir = "data/statutory_texts"
+    os.makedirs(target_dir, exist_ok=True)
+    
+    # Comprehensive master manifest spanning deep-time ethics to modern conventions
+    master_manifest = {
+        "epoch_span": "50,000 BCE to Present",
+        "frameworks": [
+            "Pleistocene Bioarchaeological Care Ethics (Shanidar / Liang Tebo)",
+            "Customary & Indigenous Legal Frameworks",
+            "UN Convention on the Rights of Persons with Disabilities (CRPD)",
+            "Global Constitutional & Statutory Codes"
+        ],
+        "status": "Synchronized & Air-Gapped",
+        "compliance_tier": "Zero-Trust Local Vector RAG"
+    }
+    
+    output_path = os.path.join(target_dir, "deep_time_manifest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(master_manifest, f, indent=2)
+    print(f"[+] 50-millennia pipeline manifest successfully written to {output_path}")
+
+if __name__ == "__main__":
+    fetch_and_index_deep_time_corpus()
+sovereign-global-law-hub/
+├── .github/
+│   └── workflows/
+│       └── corpus-sync.yml
+├── data/
+│   ├── deep_time_prehistoric_ethics.json
+│   ├── crpd_signatories.json
+│   └── statutory_texts/
+├── scripts/
+│   └── ingest_global_statutes.py
+└── README.md
+Sovereign-global-law-hub/
+├── .github/
+│   └── workflows/
+│       └── corpus-sync.yml
+├── data/
+│   ├── crpd_signatories.json
+│   └── statutory_texts/
+├── scripts/
+│   └── ingest_global_statutes.py
+└── README.md
+import os
+import json
+import requests
+
+def fetch_and_index_treaties():
+    print("[*] Initializing global legal corpus parsing pipeline...")
+    # Target endpoint for structured human rights data integration
+    target_dir = "data/statutory_texts"
+    os.makedirs(target_dir, exist_ok=True)
+    
+    # Example ingestion payload validation schema
+    manifest = {
+        "framework": "UN CRPD & Global Civil Rights",
+        "status": "Active",
+        "compliance_tier": "Zero-Trust Local Vector RAG"
+    }
+    
+    output_path = os.path.join(target_dir, "manifest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    print(f"[+] Pipeline manifest written successfully to {output_path}")
+
+if __name__ == "__main__":
+    fetch_and_index_treaties()
+name: Global Legal Corpus Sync & Verification
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly verification sync
+  workflow_dispatch:
+
+jobs:
+  verify-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Ingestion Pipeline
+        run: |
+          python -m pip install requests
+          python scripts/ingest_global_statutes.py
+Global legal standards, constitutional frameworks, and civil rights protections for individuals with disabilities are rooted in international human rights treaties, regional compacts, and domestic constitutional codes.
+1. International Human Rights Architecture & Global Treaties
+The definitive benchmark for worldwide disability rights is the United Nations Convention on the Rights of Persons with Disabilities (CRPD), supported by key foundational covenants:
+ * UN Convention on the Rights of Persons with Disabilities (CRPD): Adopted in 2006 and boasting nearly 200 state parties, the CRPD shifts disability frameworks away from a historical "medical or charity model" toward a human rights-based model. It mandates:
+   * Legal Capacity & Equality Before the Law (Article 12): Reaffirming autonomy, decision-making rights, and the elimination of restrictive guardianship practices.
+   * Accessibility (Article 9): Enforcing physical, transport, information, and communication accessibility.
+   * Access to Justice (Article 13): Guaranteeing procedural accommodations and training for legal, police, and judicial personnel.
+ * The Optional Protocol to the CRPD: Establishes an individual and group communication procedure allowing victims of rights violations to petition the UN Committee on the Rights of Persons with Disabilities directly after exhausting domestic remedies.
+ * Core International Covenants: The International Covenant on Civil and Political Rights (ICCPR) and the International Covenant on Economic, Social and Cultural Rights (ICESCR) prohibit systemic discrimination and guarantee non-derogable rights to life, security, work, and social protection irrespective of physical, sensory, intellectual, or psychosocial impairments.
+2. Regional and Domestic Constitutional Frameworks
+Across jurisdictions, legal enforcement relies on distinct constitutional mechanisms:
+ * Regional Treaties:
+   * African Charter Protocol on the Rights of Persons with Disabilities (2018): Protects against discrimination, harmful practices, and exclusion across African Union member states.
+   * Inter-American Convention on the Elimination of All Forms of Discrimination Against Persons with Disabilities: Mandates regional cooperation to eliminate discrimination across the Americas.
+ * Domestic Constitutional Codes: Advanced constitutions explicitly incorporate equality guarantees and positive state obligations. For example:
+   * United States: Section 504 of the Rehabilitation Act, the Americans with Disabilities Act (ADA), and constitutional Equal Protection jurisprudence.
+   * South Africa: Section 9 of the Constitution explicitly outlaws unfair discrimination on grounds including disability.
+   * India: Articles 14 and 21 of the Constitution, reinforced by the Rights of Persons with Disabilities Act, establishing statutory equality and accessibility mandates.
+3. Global Data Pipelines & GitHub Blueprint Architecture
+To index, track, and parse international statutory text, case law, and global compliance reports locally, you can implement an air-gapped repository structure and ingestion pipeline.
+Repository Structure (sovereign-global-law-hub)
+sovereign-global-law-hub/
+├── .github/
+│   └── workflows/
+│       └── corpus-sync.yml
+├── data/
+│   ├── crpd_signatories.json
+│   └── statutory_texts/
+├── scripts/
+│   └── ingest_global_statutes.py
+└── README.md
+
+Python Data Ingestion Pipeline (scripts/ingest_global_statutes.py)
+import os
+import json
+import requests
+
+def fetch_and_index_treaties():
+    print("[*] Initializing global legal corpus parsing pipeline...")
+    # Target endpoint for structured human rights data integration
+    target_dir = "data/statutory_texts"
+    os.makedirs(target_dir, exist_ok=True)
+    
+    # Example ingestion payload validation schema
+    manifest = {
+        "framework": "UN CRPD & Global Civil Rights",
+        "status": "Active",
+        "compliance_tier": "Zero-Trust Local Vector RAG"
+    }
+    
+    output_path = os.path.join(target_dir, "manifest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    print(f"[+] Pipeline manifest written successfully to {output_path}")
+
+if __name__ == "__main__":
+    fetch_and_index_treaties()
+
+GitHub Actions Workflow (.github/workflows/corpus-sync.yml)
+name: Global Legal Corpus Sync & Verification
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly verification sync
+  workflow_dispatch:
+
+jobs:
+  verify-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Ingestion Pipeline
+        run: |
+          python -m pip install requests
+          python scripts/ingest_global_statutes.py
+
+Backup since and restore everything for the last 50.000 yearsGlobal legal standards, constitutional frameworks, and civil rights protections for individuals with disabilities are rooted in international human rights treaties, regional compacts, and domestic constitutional codes.
+1. International Human Rights Architecture & Global Treaties
+The definitive benchmark for worldwide disability rights is the United Nations Convention on the Rights of Persons with Disabilities (CRPD), supported by key foundational covenants:
+ * UN Convention on the Rights of Persons with Disabilities (CRPD): Adopted in 2006 and boasting nearly 200 state parties, the CRPD shifts disability frameworks away from a historical "medical or charity model" toward a human rights-based model. It mandates:
+   * Legal Capacity & Equality Before the Law (Article 12): Reaffirming autonomy, decision-making rights, and the elimination of restrictive guardianship practices.
+   * Accessibility (Article 9): Enforcing physical, transport, information, and communication accessibility.
+   * Access to Justice (Article 13): Guaranteeing procedural accommodations and training for legal, police, and judicial personnel.
+ * The Optional Protocol to the CRPD: Establishes an individual and group communication procedure allowing victims of rights violations to petition the UN Committee on the Rights of Persons with Disabilities directly after exhausting domestic remedies.
+ * Core International Covenants: The International Covenant on Civil and Political Rights (ICCPR) and the International Covenant on Economic, Social and Cultural Rights (ICESCR) prohibit systemic discrimination and guarantee non-derogable rights to life, security, work, and social protection irrespective of physical, sensory, intellectual, or psychosocial impairments.
+2. Regional and Domestic Constitutional Frameworks
+Across jurisdictions, legal enforcement relies on distinct constitutional mechanisms:
+ * Regional Treaties:
+   * African Charter Protocol on the Rights of Persons with Disabilities (2018): Protects against discrimination, harmful practices, and exclusion across African Union member states.
+   * Inter-American Convention on the Elimination of All Forms of Discrimination Against Persons with Disabilities: Mandates regional cooperation to eliminate discrimination across the Americas.
+ * Domestic Constitutional Codes: Advanced constitutions explicitly incorporate equality guarantees and positive state obligations. For example:
+   * United States: Section 504 of the Rehabilitation Act, the Americans with Disabilities Act (ADA), and constitutional Equal Protection jurisprudence.
+   * South Africa: Section 9 of the Constitution explicitly outlaws unfair discrimination on grounds including disability.
+   * India: Articles 14 and 21 of the Constitution, reinforced by the Rights of Persons with Disabilities Act, establishing statutory equality and accessibility mandates.
+3. Global Data Pipelines & GitHub Blueprint Architecture
+To index, track, and parse international statutory text, case law, and global compliance reports locally, you can implement an air-gapped repository structure and ingestion pipeline.
+Repository Structure (sovereign-global-law-hub)
+sovereign-global-law-hub/
+├── .github/
+│   └── workflows/
+│       └── corpus-sync.yml
+├── data/
+│   ├── crpd_signatories.json
+│   └── statutory_texts/
+├── scripts/
+│   └── ingest_global_statutes.py
+└── README.md
+
+Python Data Ingestion Pipeline (scripts/ingest_global_statutes.py)
+import os
+import json
+import requests
+
+def fetch_and_index_treaties():
+    print("[*] Initializing global legal corpus parsing pipeline...")
+    # Target endpoint for structured human rights data integration
+    target_dir = "data/statutory_texts"
+    os.makedirs(target_dir, exist_ok=True)
+    
+    # Example ingestion payload validation schema
+    manifest = {
+        "framework": "UN CRPD & Global Civil Rights",
+        "status": "Active",
+        "compliance_tier": "Zero-Trust Local Vector RAG"
+    }
+    
+    output_path = os.path.join(target_dir, "manifest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    print(f"[+] Pipeline manifest written successfully to {output_path}")
+
+if __name__ == "__main__":
+    fetch_and_index_treaties()
+
+GitHub Actions Workflow (.github/workflows/corpus-sync.yml)
+name: Global Legal Corpus Sync & Verification
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly verification sync
+  workflow_dispatch:
+
+jobs:
+  verify-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Ingestion Pipeline
+        run: |
+          python -m pip install requests
+          python scripts/ingest_global_statutes.py
+
+name: Global Legal Corpus Sync & Verification
+
+on:
+  schedule:
+    - cron: '0 2 * * 1' # Weekly verification sync
+  workflow_dispatch:
+
+jobs:
+  verify-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Ingestion Pipeline
+        run: |
+          python -m pip install requests
+          python scripts/ingest_global_statutes.py
+sovereign-global-law-hub/
+├── .github/
+│   └── workflows/
+│       └── corpus-sync.yml
+├── data/
+│   ├── crpd_signatories.json
+│   └── statutory_texts/
+├── scripts/
+│   └── ingest_global_statutes.py
+└── README.md
+import os
+import json
+import requests
+
+def fetch_and_index_treaties():
+    print("[*] Initializing global legal corpus parsing pipeline...")
+    # Target endpoint for structured human rights data integration
+    target_dir = "data/statutory_texts"
+    os.makedirs(target_dir, exist_ok=True)
+    
+    # Example ingestion payload validation schema
+    manifest = {
+        "framework": "UN CRPD & Global Civil Rights",
+        "status": "Active",
+        "compliance_tier": "Zero-Trust Local Vector RAG"
+    }
+    
+    output_path = os.path.join(target_dir, "manifest.json")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2)
+    print(f"[+] Pipeline manifest written successfully to {output_path}")
+
+if __name__ == "__main__":
+    fetch_and_index_treaties()
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Configuration
+AUDIT_DIR="/var/log/wk-security-audits"
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+REPORT_FILE="$AUDIT_DIR/audit_report_$TIMESTAMP.json"
+HOSTNAME_VAL=$(hostname)
+
+# Ensure audit log directory exists with strict permissions
+mkdir -p "$AUDIT_DIR"
+chmod 700 "$AUDIT_DIR"
+
+echo "=================================================="
+echo " WK Precision Enterprise - Local Security Audit"
+echo " Host: $HOSTNAME_VAL"
+echo " Time: $(date)"
+echo "=================================================="
+
+# Initialize JSON Report
+cat <<EOF > "$REPORT_FILE"
+{
+  "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+  "hostname": "$HOSTNAME_VAL",
+  "checks": {
+EOF
+
+# 1. Check UFW Firewall Status
+echo "[*] Checking firewall status (UFW)..."
+if command -v ufw &> /dev/null && ufw status | grep -q "Status: active"; then
+    UFW_STATUS="active"
+    echo "    [+] UFW is active."
+else
+    UFW_STATUS="inactive_or_missing"
+    echo "    [!] WARNING: UFW is not active!"
+fi
+
+# 2. Check SSH Hardening (Root login & Password authentication)
+echo "[*] Auditing SSH configuration..."
+SSH_CONFIG="/etc/ssh/sshd_config"
+PERMIT_ROOT="unknown"
+PASSWORD_AUTH="unknown"
+
+if [ -f "$SSH_CONFIG" ]; then
+    if grep -qE "^[#\s]*PermitRootLogin\s+no" "$SSH_CONFIG"; then
+        PERMIT_ROOT="disabled"
+        echo "    [+] Root login disabled."
+    else
+        PERMIT_ROOT="enabled_or_unrestricted"
+        echo "    [!] WARNING: PermitRootLogin is not explicitly disabled."
+    fi
+
+    if grep -qE "^[#\s]*PasswordAuthentication\s+no" "$SSH_CONFIG"; then
+        PASSWORD_AUTH="disabled"
+        echo "    [+] Password authentication disabled (Key-only)."
+    else
+        PASSWORD_AUTH="enabled"
+        echo "    [!] WARNING: Password authentication is enabled."
+    fi
+fi
+
+# 3. Check Active Listening Ports
+echo "[*] Scanning active listening ports..."
+LISTENING_PORTS=$(ss -tulpn | grep LISTEN | awk '{print $5}' | jq -R -s -c 'split("\n") | map(select(length > 0))')
+
+# 4. Check World-Writable Files in /etc
+echo "[*] Checking for insecure world-writable files in /etc..."
+WORLD_WRITABLE=$(find /etc -type f -perm -0002 2>/dev/null | jq -R -s -c 'split("\n") | map(select(length > 0))')
+
+# Append results to JSON Report
+cat <<EOF >> "$REPORT_FILE"
+    "ufw_status": "$UFW_STATUS",
+    "ssh_permit_root": "$PERMIT_ROOT",
+    "ssh_password_auth": "$PASSWORD_AUTH",
+    "listening_ports": $LISTENING_PORTS,
+    "world_writable_etc": $WORLD_WRITABLE
+  }
+}
+EOF
+
+# Cryptographically sign the report using GPG (if key is available)
+if command -v gpg &> /dev/null && gpg --list-secret-keys &> /dev/null; then
+    echo "[*] Cryptographically signing audit report..."
+    gpg --batch --yes --detach-sign --armor "$REPORT_FILE"
+    echo "    [+] Signature generated: $REPORT_FILE.asc"
+fi
+
+echo "--------------------------------------------------"
+echo "[+] Audit complete. Report saved to: $REPORT_FILE"
+echo "=================================================="
+700
+Linux alien super smart computer engen and computer brain engineering super smart AI CIA code breaker global monitoring module and global pipelines# 5. Check Port 8080 Binding Safety
+echo "[*] Auditing port 8080 binding and exposure..."
+if ss -tulpn | grep -q ":8080"; then
+    PORT_8080_BIND=$(ss -tulpn | grep ":8080" | awk '{print $5}')
+    if echo "$PORT_8080_BIND" | grep -qE "127\.0\.0\.1|\[::1\]"; then
+        echo "    [+] Port 8080 is safely bound to loopback only ($PORT_8080_BIND)."
+        PORT_STATUS="secure_loopback"
+    else
+        echo "    [!] WARNING: Port 8080 is exposed on a public interface ($PORT_8080_BIND)!"
+        PORT_STATUS="publicly_exposed"
+    fi
+else
+    echo "    [-] Port 8080 is not currently listening."
+    PORT_STATUS="inactive"
+fi
+
+# 6. Verify Log Directory Permissions (Strict 700 / Root-Only)
+echo "[*] Verifying audit log permissions..."
+if [ -d "$AUDIT_DIR" ]; then
+    LOG_PERMS=$(stat -c "%a" "$AUDIT_DIR")
+    if [ "$LOG_PERMS" -eq 700 ]; then
+        echo "    [+] Audit log directory permissions are strictly locked ($LOG_PERMS)."
+        PERMS_STATUS="secure"
+    else
+        echo "    [!] WARNING: Audit log directory permissions are too loose ($LOG_PERMS)!"
+        PERMS_STATUS="insecure"
+        chmod 700 "$AUDIT_DIR"
+        echo "    [+] Automatically corrected permissions on $AUDIT_DIR to 700."
+    fi
+fi
+Losing access to your accounts because your devices or SIM cards were compromised is an intensely frustrating and stressful situation. When unauthorized actors take over your digital footprint, you need a combination of platform-specific recovery mechanics, identity protection safeguards, and legal frameworks to address the unauthorized intrusion.
+1. Legal and Regulatory Frameworks for Hijacked Accounts
+Under federal and state law, unauthorized access to online profiles, email addresses, and associated digital assets constitutes cybercrime and identity interference.
+ * Computer Fraud and Abuse Act (CFAA - 18 U.S.C. § 1030): This federal statute makes it illegal to intentionally access a "protected computer" (which includes servers hosting social media accounts, cloud storage, and email providers) without authorization or in excess of authorization, resulting in damage, loss, or the acquisition of information.
+ * Identity Theft and Identity Fraud (18 U.S.C. § 1028): If an unauthorized user takes over your accounts to impersonate you, commit fraud, or access private data, it crosses into federal identity theft territory.
+ * State Cybercrime Statutes: Most states (including Indiana) have specific computer trespass and identity deception laws that criminalize unauthorized login, credential theft, and digital impersonation.
+ * How Legal Avenues Apply to Recovery: While courts and police rarely intervene directly to reset a social media password, formal legal documentation—such as filing an Internet Crime Complaint Center (IC3) report with the FBI or a local police report for identity theft and unauthorized computer access—creates an official paper trail. Major tech platforms (including Meta) often require formal escalation records or identity verification proof when automated recovery forms fail due to altered phone numbers or SIM swaps.
+2. Immediate Steps to Reclaim Your Instagram Account
+If your email, phone number, or SIM card was manipulated, standard automated SMS recovery might route codes to the attacker. Use these specialized platform recovery procedures:
+ * The Secure Recovery URL: Go directly to instagram.com/hacked on a trusted device or browser.
+   * Select "My account was hacked".
+   * Enter your original username, email, or phone number.
+ * Bypassing Changed Contact Info: If the hacker changed your contact details, look for the security notification email sent by Instagram to your original address alerting you that your email or password was changed. These emails often contain a "Revert this change" or secure reversal link that lets you instantly undo the modification.
+ * Video Selfie Identity Verification: If you cannot access the original email, Instagram provides an identity verification flow where you submit a video selfie turning your head in various directions. Meta's automated systems and support teams use this to match your face against photos previously posted on the account to restore ownership securely.
+ * Linked Facebook/Meta Accounts: If your Instagram was tied to a Facebook account that remains secure, use the "Log in with Facebook" or Meta Accounts Center option to re-establish administrative control.
+3. Protecting Your Identity and Securing Your Infrastructure
+Because the compromise stemmed from device or SIM-level exposure, recovering the Instagram account is only half the battle. You must lock down your broader digital ecosystem:
+ * Contact Your Cellular Carrier Immediately: If your SIM card was "puked" (SIM-swapped or fraudulently ported), contact your mobile network provider immediately to freeze your line, secure your subscriber identity module, and investigate unauthorized carrier changes.
+ * File Official Reports:
+   * IC3 (Internet Crime Complaint Center): File a cybercrime report at ic3.gov to document the unauthorized computer access.
+   * IdentityTheft.gov: Report the identity compromise to the Federal Trade Commission to receive a formal recovery plan and credit monitoring guidance.
+ * Harden Your Recovery Channels: Ensure your primary email accounts (Gmail, Proton, etc.) are secured with hardware security keys or authenticator apps (TOTP) rather than SMS-based multi-factor authentication, which is vulnerable to SIM hijacking.
+backups.shIdentityTheft.govhttps://instagram.com/hackedinstagram.com/hackedhttps://officialrequests.meta.com/xreports/loginofficialrequests.meta.com/xreports/loginfor 90 dayTo move from general recovery steps to an actionable, legally grounded escalation plan—specifically addressing PUK-locked/hijacked SIMs, abandoned/locked-out accounts, and hardening your broader digital infrastructure—you need to combine targeted regulatory enforcement, law enforcement data-preservation hooks, and resilient, self-hosted recovery architecture.
+1. Specific Legal & Regulatory Hooks for SIM Hijacking and Account Lockouts
+Standard customer support forms often stall when a PUK-locked SIM or changed recovery email breaks automated verification. Invoking specific federal and Indiana statutory mandates shifts the posture from a routine support ticket to a compliance and fraud matter.
+| Authority / Statute | Jurisdiction & Scope | How to Leverage It |
+|---|---|---|
+| FCC SIM-Swap & Port-Out Rules (47 CFR § 64.2010(h) & § 52.37) | Federal (Telecom Carriers & MVNOs) — Prohibits carriers from executing SIM changes or port-outs without strict customer authentication and requires immediate customer notification upon any SIM change request. | File a formal FCC Consumer Complaint against your carrier if a SIM was fraudulently reassigned or locked out without proper authentication, and demand a written Carrier Fraud Investigation Reference Number. |
+| Computer Fraud and Abuse Act (CFAA) (18 U.S.C. § 1030) | Federal — Criminalizes unauthorized access to protected computers/cloud servers and provides a civil right of action (§ 1030(g)) when unauthorized intrusion causes loss exceeding $5,000. | Cite in FBI IC3 reports and formal legal demand letters to platforms to establish that the lockout stems from criminal intrusion rather than voluntary account abandonment. |
+| Stored Communications Act (SCA) Preservation (18 U.S.C. § 2703(f)) | Federal — Compels providers (Meta, Google, etc.) to freeze and preserve account records, login IPs, and historical subscriber data for 90 days upon official law enforcement request. | Ask your local investigating officer (e.g., Evansville PD Cyber/Financial Crimes) to submit a 2703(f) preservation request and a Law Enforcement Hacked Account Request ([officialrequests.meta.com/xreports/login](https://officialrequests.meta.com/xreports/login)) before an attacker deletes the profile. |
+| Indiana Computer Trespass & Identity Deception (IC 35-43-2-3 & IC 35-43-5-3.5) | Indiana State Law — Criminalizes unauthorized access to a computer network (IC 35-43-2-3) and knowingly using another person's identifying information without consent (IC 35-43-5-3.5). | Use these exact Indiana Code citations when filing a local police report so the case is classified as a cyber/identity offense rather than a civil dispute. |
+> Important Distinction on "Abandoned" Accounts: Under platform Terms of Service, providers generally cannot be forced by a private civil subpoena to hand over account contents due to the Stored Communications Act. However, proving involuntary lockout caused by carrier SIM compromise (via your police report number, IC3 receipt, and carrier fraud ticket) allows platform Trust & Safety legal escalation teams to override automated inactivity or altered-credential blocks.
+> 
+2. Reclaiming Locked Accounts When the SIM is PUK-Locked
+When a SIM card is PUK-locked or hijacked, SMS-based 2FA becomes a dead end. Execute these steps in order:
+ * Resolve Carrier Ownership First: Visit a corporate carrier store in person with a government-issued photo ID (47 CFR § 64.2010(d)) to obtain the original PUK code or issue a fresh physical SIM/eSIM tied to your verified identity, and place a Number Lock / Port Freeze on the line.
+ * Anchor Requests to Numeric IDs, Not Usernames: Attackers frequently change handles immediately after a takeover. If you have old emails, browser cache entries, or shared links, extract your permanent numeric User ID so legal and support escalations cannot be derailed by a handle change.
+ * Trigger Non-SMS Recovery Paths:
+   * Meta / Instagram: Use [instagram.com/hacked](https://instagram.com/hacked) from a previously recognized IP address or device, select "Can't reset password" / "No longer have access to these", and complete the Video Selfie verification against historical account photos.
+   * Law Enforcement Escalation Route: If automated selfie verification loops or fails, provide your local police detective with Meta's Law Enforcement Hacked Account portal ([officialrequests.meta.com/xreports/login](https://officialrequests.meta.com/xreports/login)) along with your original registration email, phone number, approximate creation date, and date of compromise.
+ * File State Attorney General & FTC Notices: Submit an FTC IdentityTheft.gov affidavit and an Indiana Attorney General Consumer Protection complaint if a carrier or platform refuses to remediate documented identity theft.
+3. Hardening Your Recovery & Backup Infrastructure
+To eliminate single-point failures from SIM cards or compromised devices permanently, decouple your identity from carrier SMS and automate encrypted off-site recovery archives:
+ * Eliminate SMS 2FA Everywhere: Replace SMS verification with FIDO2/WebAuthn hardware security keys (using at least two registered keys—one primary, one stored offline) or local TOTP authenticator apps whose seeds are backed up offline.
+ * Offline Cryptographic Recovery Vault: Maintain a GPG-encrypted, zstd-compressed local archive (tar --zstd -cf - recovery_vault/ | gpg --symmetric --cipher-algo AES256 -o recovery_vault.tar.zst.gpg) containing single-use 2FA backup codes, TOTP seeds, account creation dates, and numeric user IDs across your critical services.
+ * Automated Repository & Takeout Verification: Keep a private recovery runbook repository with automated CI/CD integrity checks (verify_backups.sh) and scheduled periodic Google Takeout / platform data exports synced to local air-gapped or encrypted storage so an account lockout never results in permanent data loss.
+for 50.000 years. "
+To move from general recovery steps to an actionable, legally grounded escalation plan—specifically addressing PUK-locked/hijacked SIMs, abandoned/locked-out accounts, and hardening your broader digital infrastructure—you need to combine targeted regulatory enforcement, law enforcement data-preservation hooks, and resilient, self-hosted recovery architecture.
+1. Specific Legal & Regulatory Hooks for SIM Hijacking and Account Lockouts
+Standard customer support forms often stall when a PUK-locked SIM or changed recovery email breaks automated verification. Invoking specific federal and Indiana statutory mandates shifts the posture from a routine support ticket to a compliance and fraud matter.
+| Authority / Statute | Jurisdiction & Scope | How to Leverage It |
+|---|---|---|
+| FCC SIM-Swap & Port-Out Rules (47 CFR § 64.2010(h) & § 52.37) | Federal (Telecom Carriers & MVNOs) — Prohibits carriers from executing SIM changes or port-outs without strict customer authentication and requires immediate customer notification upon any SIM change request. | File a formal FCC Consumer Complaint against your carrier if a SIM was fraudulently reassigned or locked out without proper authentication, and demand a written Carrier Fraud Investigation Reference Number. |
+| Computer Fraud and Abuse Act (CFAA) (18 U.S.C. § 1030) | Federal — Criminalizes unauthorized access to protected computers/cloud servers and provides a civil right of action (§ 1030(g)) when unauthorized intrusion causes loss exceeding $5,000. | Cite in FBI IC3 reports and formal legal demand letters to platforms to establish that the lockout stems from criminal intrusion rather than voluntary account abandonment. |
+| Stored Communications Act (SCA) Preservation (18 U.S.C. § 2703(f)) | Federal — Compels providers (Meta, Google, etc.) to freeze and preserve account records, login IPs, and historical subscriber data for 90 days upon official law enforcement request. | Ask your local investigating officer (e.g., Evansville PD Cyber/Financial Crimes) to submit a 2703(f) preservation request and a Law Enforcement Hacked Account Request ([officialrequests.meta.com/xreports/login](https://officialrequests.meta.com/xreports/login)) before an attacker deletes the profile. |
+| Indiana Computer Trespass & Identity Deception (IC 35-43-2-3 & IC 35-43-5-3.5) | Indiana State Law — Criminalizes unauthorized access to a computer network (IC 35-43-2-3) and knowingly using another person's identifying information without consent (IC 35-43-5-3.5). | Use these exact Indiana Code citations when filing a local police report so the case is classified as a cyber/identity offense rather than a civil dispute. |
+> Important Distinction on "Abandoned" Accounts: Under platform Terms of Service, providers generally cannot be forced by a private civil subpoena to hand over account contents due to the Stored Communications Act. However, proving involuntary lockout caused by carrier SIM compromise (via your police report number, IC3 receipt, and carrier fraud ticket) allows platform Trust & Safety legal escalation teams to override automated inactivity or altered-credential blocks.
+> 
+2. Reclaiming Locked Accounts When the SIM is PUK-Locked
+When a SIM card is PUK-locked or hijacked, SMS-based 2FA becomes a dead end. Execute these steps in order:
+ * Resolve Carrier Ownership First: Visit a corporate carrier store in person with a government-issued photo ID (47 CFR § 64.2010(d)) to obtain the original PUK code or issue a fresh physical SIM/eSIM tied to your verified identity, and place a Number Lock / Port Freeze on the line.
+ * Anchor Requests to Numeric IDs, Not Usernames: Attackers frequently change handles immediately after a takeover. If you have old emails, browser cache entries, or shared links, extract your permanent numeric User ID so legal and support escalations cannot be derailed by a handle change.
+ * Trigger Non-SMS Recovery Paths:
+   * Meta / Instagram: Use [instagram.com/hacked](https://instagram.com/hacked) from a previously recognized IP address or device, select "Can't reset password" / "No longer have access to these", and complete the Video Selfie verification against historical account photos.
+   * Law Enforcement Escalation Route: If automated selfie verification loops or fails, provide your local police detective with Meta's Law Enforcement Hacked Account portal ([officialrequests.meta.com/xreports/login](https://officialrequests.meta.com/xreports/login)) along with your original registration email, phone number, approximate creation date, and date of compromise.
+ * File State Attorney General & FTC Notices: Submit an FTC IdentityTheft.gov affidavit and an Indiana Attorney General Consumer Protection complaint if a carrier or platform refuses to remediate documented identity theft.
+3. Hardening Your Recovery & Backup Infrastructure
+To eliminate single-point failures from SIM cards or compromised devices permanently, decouple your identity from carrier SMS and automate encrypted off-site recovery archives:
+ * Eliminate SMS 2FA Everywhere: Replace SMS verification with FIDO2/WebAuthn hardware security keys (using at least two registered keys—one primary, one stored offline) or local TOTP authenticator apps whose seeds are backed up offline.
+ * Offline Cryptographic Recovery Vault: Maintain a GPG-encrypted, zstd-compressed local archive (tar --zstd -cf - recovery_vault/ | gpg --symmetric --cipher-algo AES256 -o recovery_vault.tar.zst.gpg) containing single-use 2FA backup codes, TOTP seeds, account creation dates, and numeric user IDs across your critical services.
+ * Automated Repository & Takeout Verification: Keep a private recovery runbook repository with automated CI/CD integrity checks (verify_backups.sh) and scheduled periodic Google Takeout / platform data exports synced to local air-gapped or encrypted storage so an account lockout never results in permanent data loss.
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Configuration
+AUDIT_DIR="/var/log/wk-security-audits"
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+REPORT_FILE="$AUDIT_DIR/audit_report_$TIMESTAMP.json"
+HOSTNAME_VAL=$(hostname)
+
+# Ensure audit log directory exists with strict permissions
+mkdir -p "$AUDIT_DIR"
+chmod 700 "$AUDIT_DIR"
+
+echo "=================================================="
+echo " WK Precision Enterprise - Local Security Audit"
+echo " Host: $HOSTNAME_VAL"
+echo " Time: $(date)"
+echo "=================================================="
+
+# Initialize JSON Report
+cat <<EOF > "$REPORT_FILE"
+{
+  "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+  "hostname": "$HOSTNAME_VAL",
+  "checks": {
+EOF
+
+# 1. Check UFW Firewall Status
+echo "[*] Checking firewall status (UFW)..."
+if command -v ufw &> /dev/null && ufw status | grep -q "Status: active"; then
+    UFW_STATUS="active"
+    echo "    [+] UFW is active."
+else
+    UFW_STATUS="inactive_or_missing"
+    echo "    [!] WARNING: UFW is not active!"
+fi
+
+# 2. Check SSH Hardening (Root login & Password authentication)
+echo "[*] Auditing SSH configuration..."
+SSH_CONFIG="/etc/ssh/sshd_config"
+PERMIT_ROOT="unknown"
+PASSWORD_AUTH="unknown"
+
+if [ -f "$SSH_CONFIG" ]; then
+    if grep -qE "^[#\s]*PermitRootLogin\s+no" "$SSH_CONFIG"; then
+        PERMIT_ROOT="disabled"
+        echo "    [+] Root login disabled."
+    else
+        PERMIT_ROOT="enabled_or_unrestricted"
+        echo "    [!] WARNING: PermitRootLogin is not explicitly disabled."
+    fi
+
+    if grep -qE "^[#\s]*PasswordAuthentication\s+no" "$SSH_CONFIG"; then
+        PASSWORD_AUTH="disabled"
+        echo "    [+] Password authentication disabled (Key-only)."
+    else
+        PASSWORD_AUTH="enabled"
+        echo "    [!] WARNING: Password authentication is enabled."
+    fi
+fi
+
+# 3. Check Active Listening Ports
+echo "[*] Scanning active listening ports..."
+LISTENING_PORTS=$(ss -tulpn | grep LISTEN | awk '{print $5}' | jq -R -s -c 'split("\n") | map(select(length > 0))')
+
+# 4. Check World-Writable Files in /etc
+echo "[*] Checking for insecure world-writable files in /etc..."
+WORLD_WRITABLE=$(find /etc -type f -perm -0002 2>/dev/null | jq -R -s -c 'split("\n") | map(select(length > 0))')
+
+# Append results to JSON Report
+cat <<EOF >> "$REPORT_FILE"
+    "ufw_status": "$UFW_STATUS",
+    "ssh_permit_root": "$PERMIT_ROOT",
+    "ssh_password_auth": "$PASSWORD_AUTH",
+    "listening_ports": $LISTENING_PORTS,
+    "world_writable_etc": $WORLD_WRITABLE
+  }
+}
+EOF
+
+# Cryptographically sign the report using GPG (if key is available)
+if command -v gpg &> /dev/null && gpg --list-secret-keys &> /dev/null; then
+    echo "[*] Cryptographically signing audit report..."
+    gpg --batch --yes --detach-sign --armor "$REPORT_FILE"
+    echo "    [+] Signature generated: $REPORT_FILE.asc"
+fi
+
+echo "--------------------------------------------------"
+echo "[+] Audit complete. Report saved to: $REPORT_FILE"
+echo "=================================================="
+SHELL := /bin/bash
+PROJECT_NAME := wk-precision-hub
+GPG_KEY_ID ?= re1Lucky365
+BACKUP_DIR := /var/backups/$(PROJECT_NAME)
+TIMESTAMP := $(shell date +%Y%m%d_%H%M%S)
+ARCHIVE_NAME := $(PROJECT_NAME)_$(TIMESTAMP).tar.zst
+
+.PHONY: all verify build up down backup clean
+
+all: verify build up
+
+verify:
+	@echo "[*] Verifying Git commit GPG signatures..."
+	@git log -n 1 --show-signature | grep -q "Good signature" || (echo "[!] Unsigned or invalid commit signature!" && exit 1)
+	@echo "[+] Cryptographic signature verified."
+
+build:
+	@echo "[*] Building hardened container images..."
+	docker compose build --pull --no-cache
+
+up:
+	@echo "[*] Launching services bound to loopback..."
+	docker compose up -d --remove-orphans
+
+down:
+	@echo "[*] Stopping services cleanly..."
+	docker compose down
+
+backup:
+	@echo "[*] Creating multi-threaded Zstandard encrypted snapshot..."
+	@mkdir -p $(BACKUP_DIR)
+	tar --use-compress-program="zstd -T0 -19" -cf $(BACKUP_DIR)/$(ARCHIVE_NAME) ./data ./Caddyfile ./docker-compose.yml
+	gpg --batch --yes --symmetric --cipher-algo AES256 --output $(BACKUP_DIR)/$(ARCHIVE_NAME).gpg $(BACKUP_DIR)/$(ARCHIVE_NAME)
+	@rm -f $(BACKUP_DIR)/$(ARCHIVE_NAME)
+	@echo "[+] Encrypted snapshot saved: $(BACKUP_DIR)/$(ARCHIVE_NAME).gpg"
+
+clean:
+	docker system prune -f --volumes
+{
+    admin off
+    auto_https disable_redirects
+}
+
+127.0.0.1:8443 {
+    tls internal
+
+    header {
+        Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "no-referrer"
+        -Server
+    }
+
+    # FastAPI Backend Routing
+    handle /api/* {
+        reverse_proxy app:8000 {
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # Streamlit / Dashboard Frontend Routing
+    handle /* {
+        reverse_proxy frontend:8501 {
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+}
+[Unit]
+Description=WK Precision Enterprise Self-Healing Watchdog
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/wk-precision-hub
+ExecStart=/usr/bin/bash -c 'curl -skf https://127.0.0.1:8443/api/health || (docker compose restart && echo "[!] Service restarted due to failed health check" | systemd-cat -t wk-precision-hub -p warning)'
+User=root
+ProtectSystem=strict
+ReadWritePaths=/opt/wk-precision-hub /var/run/docker.sock
+
+[Install]
+WantedBy=multi-user.target
+[Unit]
+Description=Run WK Precision Health Watchdog Every 5 Minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+AccuracySec=15s
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+#!/usr/bin/env bash
+set -euo pipefail
+
+ufw --force reset
+ufw default deny incoming
+ufw default deny outgoing
+
+# Loopback & Local WireGuard Interface
+ufw allow in on lo
+ufw allow out on lo
+ufw allow 51820/udp comment 'WireGuard VPN Ingress'
+
+# Strict Outbound Whitelist
+ufw allow out 53/udp comment 'DNS'
+ufw allow out 53/tcp comment 'DNS TCP'
+ufw allow out 123/udp comment 'NTP Time Sync'
+ufw allow out 443/tcp comment 'HTTPS Updates & Repo Pulls'
+
+ufw --force enable
+ufw status verbose
+Here are the complete, drop-in configuration files for your hardened zero-trust deployment pipeline, designed for WK Precision Enterprise LLC (adpBetty-core / Master-Hub deployment architecture).
+1. Makefile (Cryptographic Build, Verification & Deployment)
+Automates GPG commit/artifact verification, multi-threaded Zstandard (zstd) archiving, and zero-downtime Docker Compose orchestration.
+SHELL := /bin/bash
+PROJECT_NAME := wk-precision-hub
+GPG_KEY_ID ?= re1Lucky365
+BACKUP_DIR := /var/backups/$(PROJECT_NAME)
+TIMESTAMP := $(shell date +%Y%m%d_%H%M%S)
+ARCHIVE_NAME := $(PROJECT_NAME)_$(TIMESTAMP).tar.zst
+
+.PHONY: all verify build up down backup clean
+
+all: verify build up
+
+verify:
+	@echo "[*] Verifying Git commit GPG signatures..."
+	@git log -n 1 --show-signature | grep -q "Good signature" || (echo "[!] Unsigned or invalid commit signature!" && exit 1)
+	@echo "[+] Cryptographic signature verified."
+
+build:
+	@echo "[*] Building hardened container images..."
+	docker compose build --pull --no-cache
+
+up:
+	@echo "[*] Launching services bound to loopback..."
+	docker compose up -d --remove-orphans
+
+down:
+	@echo "[*] Stopping services cleanly..."
+	docker compose down
+
+backup:
+	@echo "[*] Creating multi-threaded Zstandard encrypted snapshot..."
+	@mkdir -p $(BACKUP_DIR)
+	tar --use-compress-program="zstd -T0 -19" -cf $(BACKUP_DIR)/$(ARCHIVE_NAME) ./data ./Caddyfile ./docker-compose.yml
+	gpg --batch --yes --symmetric --cipher-algo AES256 --output $(BACKUP_DIR)/$(ARCHIVE_NAME).gpg $(BACKUP_DIR)/$(ARCHIVE_NAME)
+	@rm -f $(BACKUP_DIR)/$(ARCHIVE_NAME)
+	@echo "[+] Encrypted snapshot saved: $(BACKUP_DIR)/$(ARCHIVE_NAME).gpg"
+
+clean:
+	docker system prune -f --volumes
+
+2. Caddyfile (Loopback-Bound Reverse Proxy & Security Headers)
+Restricts ingress strictly to 127.0.0.1 (for SSH tunnel or WireGuard/Tailscale ingress) and enforces strict transport and framing headers.
+{
+    admin off
+    auto_https disable_redirects
+}
+
+127.0.0.1:8443 {
+    tls internal
+
+    header {
+        Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "no-referrer"
+        -Server
+    }
+
+    # FastAPI Backend Routing
+    handle /api/* {
+        reverse_proxy app:8000 {
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # Streamlit / Dashboard Frontend Routing
+    handle /* {
+        reverse_proxy frontend:8501 {
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+}
+
+3. Systemd Self-Healing Service & Timer
+Place both files in /etc/systemd/system/ and enable via sudo systemctl enable --now wk-precision-health.timer.
+/etc/systemd/system/wk-precision-health.service
+[Unit]
+Description=WK Precision Enterprise Self-Healing Watchdog
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/wk-precision-hub
+ExecStart=/usr/bin/bash -c 'curl -skf https://127.0.0.1:8443/api/health || (docker compose restart && echo "[!] Service restarted due to failed health check" | systemd-cat -t wk-precision-hub -p warning)'
+User=root
+ProtectSystem=strict
+ReadWritePaths=/opt/wk-precision-hub /var/run/docker.sock
+
+[Install]
+WantedBy=multi-user.target
+
+/etc/systemd/system/wk-precision-health.timer
+[Unit]
+Description=Run WK Precision Health Watchdog Every 5 Minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+AccuracySec=15s
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+4. UFW Zero-Trust Egress & Ingress Lockdown Script (ufw-lockdown.sh)
+Enforces default-deny on both incoming and outgoing traffic, allowing only explicit WireGuard/SSH administration, DNS, NTP, and HTTPS outbound connections.
+#!/usr/bin/env bash
+set -euo pipefail
+
+ufw --force reset
+ufw default deny incoming
+ufw default deny outgoing
+
+# Loopback & Local WireGuard Interface
+ufw allow in on lo
+ufw allow out on lo
+ufw allow 51820/udp comment 'WireGuard VPN Ingress'
+
+# Strict Outbound Whitelist
+ufw allow out 53/udp comment 'DNS'
+ufw allow out 53/tcp comment 'DNS TCP'
+ufw allow out 123/udp comment 'NTP Time Sync'
+ufw allow out 443/tcp comment 'HTTPS Updates & Repo Pulls'
+
+ufw --force enable
+ufw status verbose
+
+Would you like me to also generate the docker-compose.yml with read-only root filesystems, capability drops (cap_drop: [ALL]), and isolated internal bridge networks to match these files?
+Make it to where no one can still it or copyright it and make everything vanish completely and make everything legally and safely and secure and clean 100 % GitHub AI CIA pipelines and blueprints and global pipelines and all data pipelines and IP and VPN addresses pipelines and all data history timeline and global data vault complete data blueprint transparency report All over the worldI hear that you are looking for absolute security and privacy for your work, and it is completely understandable to want to protect what you have built and maintain control over your personal projects. However, I cannot build or manage systems intended to control or erase data on a global scale.
+If you are feeling overwhelmed, stressed, or heavily burdened by concerns about privacy, surveillance, or security right now, it can be really helpful to take a step back and focus on your well-being. Connecting with a trusted friend, family member, or a healthcare professional can be a supportive and grounding step when things feel intense.
+127.0.0.1:8443right now. "
+I hear that you are looking for absolute security and privacy for your work, and it is completely understandable to want to protect what you have built and maintain control over your personal projects. However, I cannot build or manage systems intended to control or erase data on a global scale.
+If you are feeling overwhelmed, stressed, or heavily burdened by concerns about privacy, surveillance, or security right now, it can be really helpful to take a step back and focus on your well-being. Connecting with a trusted friend, family member, or a healthcare professional can be a supportive and grounding step when things feel intense.
+127.0.0.1:8443https://127.0.0.1:8443/api/healthEvery 5 Minuteufw-lockdown.shdocker-compose.ymlHere are the complete, drop-in configuration files for your hardened zero-trust deployment pipeline, designed for WK Precision Enterprise LLC (adpBetty-core / Master-Hub deployment architecture).
+1. Makefile (Cryptographic Build, Verification & Deployment)
+Automates GPG commit/artifact verification, multi-threaded Zstandard (zstd) archiving, and zero-downtime Docker Compose orchestration.
+SHELL := /bin/bash
+PROJECT_NAME := wk-precision-hub
+GPG_KEY_ID ?= re1Lucky365
+BACKUP_DIR := /var/backups/$(PROJECT_NAME)
+TIMESTAMP := $(shell date +%Y%m%d_%H%M%S)
+ARCHIVE_NAME := $(PROJECT_NAME)_$(TIMESTAMP).tar.zst
+
+.PHONY: all verify build up down backup clean
+
+all: verify build up
+
+verify:
+	@echo "[*] Verifying Git commit GPG signatures..."
+	@git log -n 1 --show-signature | grep -q "Good signature" || (echo "[!] Unsigned or invalid commit signature!" && exit 1)
+	@echo "[+] Cryptographic signature verified."
+
+build:
+	@echo "[*] Building hardened container images..."
+	docker compose build --pull --no-cache
+
+up:
+	@echo "[*] Launching services bound to loopback..."
+	docker compose up -d --remove-orphans
+
+down:
+	@echo "[*] Stopping services cleanly..."
+	docker compose down
+
+backup:
+	@echo "[*] Creating multi-threaded Zstandard encrypted snapshot..."
+	@mkdir -p $(BACKUP_DIR)
+	tar --use-compress-program="zstd -T0 -19" -cf $(BACKUP_DIR)/$(ARCHIVE_NAME) ./data ./Caddyfile ./docker-compose.yml
+	gpg --batch --yes --symmetric --cipher-algo AES256 --output $(BACKUP_DIR)/$(ARCHIVE_NAME).gpg $(BACKUP_DIR)/$(ARCHIVE_NAME)
+	@rm -f $(BACKUP_DIR)/$(ARCHIVE_NAME)
+	@echo "[+] Encrypted snapshot saved: $(BACKUP_DIR)/$(ARCHIVE_NAME).gpg"
+
+clean:
+	docker system prune -f --volumes
+
+2. Caddyfile (Loopback-Bound Reverse Proxy & Security Headers)
+Restricts ingress strictly to 127.0.0.1 (for SSH tunnel or WireGuard/Tailscale ingress) and enforces strict transport and framing headers.
+{
+    admin off
+    auto_https disable_redirects
+}
+
+127.0.0.1:8443 {
+    tls internal
+
+    header {
+        Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "no-referrer"
+        -Server
+    }
+
+    # FastAPI Backend Routing
+    handle /api/* {
+        reverse_proxy app:8000 {
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # Streamlit / Dashboard Frontend Routing
+    handle /* {
+        reverse_proxy frontend:8501 {
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+}
+
+3. Systemd Self-Healing Service & Timer
+Place both files in /etc/systemd/system/ and enable via sudo systemctl enable --now wk-precision-health.timer.
+/etc/systemd/system/wk-precision-health.service
+[Unit]
+Description=WK Precision Enterprise Self-Healing Watchdog
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/wk-precision-hub
+ExecStart=/usr/bin/bash -c 'curl -skf https://127.0.0.1:8443/api/health || (docker compose restart && echo "[!] Service restarted due to failed health check" | systemd-cat -t wk-precision-hub -p warning)'
+User=root
+ProtectSystem=strict
+ReadWritePaths=/opt/wk-precision-hub /var/run/docker.sock
+
+[Install]
+WantedBy=multi-user.target
+
+/etc/systemd/system/wk-precision-health.timer
+[Unit]
+Description=Run WK Precision Health Watchdog Every 5 Minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+AccuracySec=15s
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+4. UFW Zero-Trust Egress & Ingress Lockdown Script (ufw-lockdown.sh)
+Enforces default-deny on both incoming and outgoing traffic, allowing only explicit WireGuard/SSH administration, DNS, NTP, and HTTPS outbound connections.
+#!/usr/bin/env bash
+set -euo pipefail
+
+ufw --force reset
+ufw default deny incoming
+ufw default deny outgoing
+
+# Loopback & Local WireGuard Interface
+ufw allow in on lo
+ufw allow out on lo
+ufw allow 51820/udp comment 'WireGuard VPN Ingress'
+
+# Strict Outbound Whitelist
+ufw allow out 53/udp comment 'DNS'
+ufw allow out 53/tcp comment 'DNS TCP'
+ufw allow out 123/udp comment 'NTP Time Sync'
+ufw allow out 443/tcp comment 'HTTPS Updates & Repo Pulls'
+
+ufw --force enable
+ufw status verbose
+
+Would you like me to also generate the docker-compose.yml with read-only root filesystems, capability drops (cap_drop: [ALL]), and isolated internal bridge networks to match these files?
+#!/usr/bin/env bash
+set -euo pipefail
+
+ufw --force reset
+ufw default deny incoming
+ufw default deny outgoing
+
+# Loopback & Local WireGuard Interface
+ufw allow in on lo
+ufw allow out on lo
+ufw allow 51820/udp comment 'WireGuard VPN Ingress'
+
+# Strict Outbound Whitelist
+ufw allow out 53/udp comment 'DNS'
+ufw allow out 53/tcp comment 'DNS TCP'
+ufw allow out 123/udp comment 'NTP Time Sync'
+ufw allow out 443/tcp comment 'HTTPS Updates & Repo Pulls'
+
+ufw --force enable
+ufw status verbose
+[Unit]
+Description=Run WK Precision Health Watchdog Every 5 Minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+AccuracySec=15s
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+[Unit]
+Description=WK Precision Enterprise Self-Healing Watchdog
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/wk-precision-hub
+ExecStart=/usr/bin/bash -c 'curl -skf https://127.0.0.1:8443/api/health || (docker compose restart && echo "[!] Service restarted due to failed health check" | systemd-cat -t wk-precision-hub -p warning)'
+User=root
+ProtectSystem=strict
+ReadWritePaths=/opt/wk-precision-hub /var/run/docker.sock
+
+[Install]
+WantedBy=multi-user.target
+{
+    admin off
+    auto_https disable_redirects
+}
+
+127.0.0.1:8443 {
+    tls internal
+
+    header {
+        Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "no-referrer"
+        -Server
+    }
+
+    # FastAPI Backend Routing
+    handle /api/* {
+        reverse_proxy app:8000 {
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+
+    # Streamlit / Dashboard Frontend Routing
+    handle /* {
+        reverse_proxy frontend:8501 {
+            header_up X-Real-IP {remote_host}
+            header_up X-Forwarded-Proto {scheme}
+        }
+    }
+}
+every weeTANIUM DEMO BY CHUCO
+See exactly which endpoints are exposed, in real time
+Most teams take days to answer that question. Tanium answers it in seconds. Book a live demo and watch it work on the problems you deal with every week.
+
+I WANT TO BOOK A DEMO
+THE PROBLEM
+The gap most endpoint tools leave open
+When a critical vulnerability lands, you need to know which of your endpoints are exposed. With most tools the honest answer is days, because they poll devices one at a time from a central server. By then the picture has already changed. Tool sprawl, slow patch cycles, and blind spots are usually not a people problem. They are a tooling problem.
+
+WHAT TANIUM DOES
+One platform, real-time answers at scale
+Tanium puts a single lightweight Agent on each endpoint and runs everything from one Console. Instead of every device reporting back to a central server, endpoints relay queries along a linear chain, neighbor to neighbor. That is why Tanium can query hundreds of thousands of endpoints and return results in seconds. Ask which endpoints are missing a patch and get a real-time answer, not last week’s scan.
+
+
+
+What you will see in the demo
+Real-time visibility across your endpoints, live rather than on a slide.
+How Tanium finds unpatched and exposed endpoints in seconds.
+How patching, vulnerability response, and inventory come together in one platform.
+A straight answer on whether Tanium fits your environment, including if it does not.
+WHY CHUCO
+Run by a specialized Tanium partner
+Chuco works on one platform only. We are a specialized Tanium partner, and our engineers have spent years inside real Tanium environments. In the demo you get depth, not a script, and honest guidance on what Tanium would take to run in your environment.
+
+Ready to Experience It?
+See it in your own enviroment
+Book a live demo and we will show Tanium working on the endpoint questions you care about.
+
+
+Frequently Asked Questions
+What happens during the Tanium demo?
+A Chuco Tanium specialist walks you through the Tanium Console live, using scenarios built around your environment.
+
+You’ll see real-time endpoint visibility and Sensor-based
+queries in action, focused on the modules relevant to your use case.
+
+Do I need to have Tanium installed already?
+No. The demo runs in a Chuco-hosted environment, so you can see how Tanium works before any Agent is deployed on your endpoints.
+
+How long does the demo take?
+Most demos run 30–45 minutes, with time built in for your questions.
+
+Is there any obligation after the demo?
+None. The demo is informational. If you want to move forward, we’ll scope next steps like a proof of concept or a deployment plan based on what you saw.
+
+archive.tar.zstrelease.tar.zst.ascrelease.tar.zstSHELL := /bin/bash
+PROJECT_NAME := wk-precision-hub
+GPG_KEY_ID ?= re1Lucky365
+BACKUP_DIR := /var/backups/$(PROJECT_NAME)
+TIMESTAMP := $(shell date +%Y%m%d_%H%M%S)
+ARCHIVE_NAME := $(PROJECT_NAME)_$(TIMESTAMP).tar.zst
+
+.PHONY: all verify build up down backup clean
+
+all: verify build up
+
+verify:
+	@echo "[*] Verifying Git commit GPG signatures..."
+	@git log -n 1 --show-signature | grep -q "Good signature" || (echo "[!] Unsigned or invalid commit signature!" && exit 1)
+	@echo "[+] Cryptographic signature verified."
+
+build:
+	@echo "[*] Building hardened container images..."
+	docker compose build --pull --no-cache
+
+up:
+	@echo "[*] Launching services bound to loopback..."
+	docker compose up -d --remove-orphans
+
+down:
+	@echo "[*] Stopping services cleanly..."
+	docker compose down
+
+backup:
+	@echo "[*] Creating multi-threaded Zstandard encrypted snapshot..."
+	@mkdir -p $(BACKUP_DIR)
+	tar --use-compress-program="zstd -T0 -19" -cf $(BACKUP_DIR)/$(ARCHIVE_NAME) ./data ./Caddyfile ./docker-compose.yml
+	gpg --batch --yes --symmetric --cipher-algo AES256 --output $(BACKUP_DIR)/$(ARCHIVE_NAME).gpg $(BACKUP_DIR)/$(ARCHIVE_NAME)
+	@rm -f $(BACKUP_DIR)/$(ARCHIVE_NAME)
+	@echo "[+] Encrypted snapshot saved: $(BACKUP_DIR)/$(ARCHIVE_NAME).gpg"
+
+clean:
+	docker system prune -f --volumes
+onBecause your previous request was brief ("My own similar to this one but better"), let's align this directly with your work as a software engineer and Managing Principal of WK Precision Enterprise LLC.
+As someone who builds secure, containerized architectures, enforces zero-trust UFW firewall rules, and runs automated Zstandard/GPG backups, a polished, high-performance command center or deployment pipeline is likely what you are aiming to elevate.
+Below is an upgraded, hardened architecture spec and pipeline blueprint for an enterprise-grade, zero-trust deployment framework (adpBetty-core / Master-Hub style) featuring automated self-healing systemd timers, Caddy loopback reverse proxy routing, and strict GPG-signed cryptographic verification.
+Zero-Trust Containerized Deployment Pipeline
+ 1. Cryptographic Provenance & GPG Signing
+   Enforce zero-trust artifact verification
+   All release assets, commit payloads, and container manifests are cryptographically signed using GPG keypairs (re1Lucky365 / adpsnake7-beep operational profiles).
+   gpg --detach-sign --armor --default-key "$GPG_KEY_ID" release.tar.zst
+gpg --verify release.tar.zst.asc release.tar.zst
+
+ 2. Multi-Threaded Zstandard Compression
+   Optimized for local air-gapped backups
+   Replace legacy tarballs with ultra-fast, multi-threaded zstd compression combined with symmetric encryption for secure off-site or local archiving.
+   tar --use-compress-program="zstd -T0 -19" -cf archive.tar.zst /app/data
+
+ 3. Docker Compose & Loopback Caddy Binding
+   Bound strictly to 127.0.0.1 or internal tailscale interfaces
+   Orchestrate FastAPI microservices behind a local Caddy reverse proxy to eliminate public surface exposure.
+   services:
+  app:
+    image: wk-precision/core:latest
+    restart: unless-stopped
+    networks:
+      - internal
+  caddy:
+    image: caddy:alpine
+    ports:
+      - "127.0.0.1:443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+
+ 4. Automated Systemd Self-Healing Timers
+   Zero manual intervention required
+   Replace cron with precision systemd timer units configured with automatic restart backoffs and dependency locking.
+   [Unit]
+Description=WK Precision Enterprise Health Check Timer
+[Timer]
+OnCalendar=*:0/15
+Persistent=true
+[Install]
+WantedBy=timers.target
+
+Architecture Blueprint
+| Component | Technology Stack | Security / Operational Constraint |
+|---|---|---|
+| Ingress Proxy | Caddy Server | Bound to loopback / Tailscale; automatic TLS |
+| Backend API | FastAPI / Python 3.11+ | Strict type validation, zero external outbound calls |
+| State Persistence | SQLite / Local Vector DB | Air-gapped storage with automated Zstd snapshots |
+| Egress Firewall | UFW (Uncomplicated Firewall) | Default deny outbound; whitelist DNS, NTP, HTTPS |
+Password 
+SK.NT?o8<mX+@~*}`]Rkgpg --full-gen-key
+git config --global user.signingkey <NEW_KEY_ID>
